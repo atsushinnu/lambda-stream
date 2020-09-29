@@ -2,7 +2,7 @@
   <div class="mb-2">
     <span>問題</span>
       <div>
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT7moeoiQ8gXMs1NCjWoGlmzVVmLgR9DWvsmphxpdS3jeP0teeppFHBBirjhDfaCWmBbMMDP1UWXPbr/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTUfKYJGMM0nS0HZ-DrzSnoKPMssvsKugQ_2PFOO_bvBGNyGsG-K8MuL1IajHIxfs762vAJkn5u_o-1/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
       <div class="editor mb-3">
         <div class="editor-wrapper">
@@ -10,7 +10,7 @@
         </div>
         <div class="item my-2">
           <div class="console">
-            <button @click="call_paiza_method()" class="btn btn-primary py-1 px-3 mr-3">実行</button>
+            <button @click="call_paiza_method()" class="btn btn-primary py-1 px-3 mr-3">処理実行</button>
             <button @click="reset()" class="btn btn-warning text-white py-1 px-3">リセット</button>
           </div>
           <Paiza ref="paiza" :content="editor_content" class="my-2"></Paiza>
