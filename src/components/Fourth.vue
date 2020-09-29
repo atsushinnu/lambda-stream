@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>中間操作とは</span>
+    <span>関数型インターフェース</span>
     <div class="">
       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT7moeoiQ8gXMs1NCjWoGlmzVVmLgR9DWvsmphxpdS3jeP0teeppFHBBirjhDfaCWmBbMMDP1UWXPbr/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
@@ -69,6 +69,3 @@ export default {
   margin: 10px auto;
 }
 </style>
-
-
-

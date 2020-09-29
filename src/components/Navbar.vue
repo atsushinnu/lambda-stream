@@ -1,26 +1,44 @@
 <template>
   <div id="nav">
-    <img src="../assets/logo.png" width="128px">
-    <router-link to="/first">ラムダ＆StreamAPI</router-link> |
-    <router-link to="/second">中間操作とは</router-link> |
-    <router-link to="/third">終端操作とは</router-link> |
-    <router-link to="/question">問題</router-link>
+    <Slide right :closeOnNavigation="true">
+      <div class="nav-link">
+        <router-link to="/first">ラムダ＆StreamAPI</router-link>
+      </div>
+      <div class="nav-link">
+        <router-link to="/second">中間操作とは</router-link>
+      </div>
+      <div class="nav-link">
+        <router-link to="/third">終端操作とは</router-link>
+      </div>
+      <div class="nav-link">
+        <router-link to="/fourth">関数型インターフェース</router-link>
+      </div>
+      <div class="nav-link">
+        <router-link to="/question">問題</router-link>
+      </div>
+    </Slide>
   </div>
 </template>
 
 <script>
+import { Slide } from 'vue-burger-menu'
 
+export default {
+  components: {
+    Slide
+  }
+}
 </script>
 
 <style scoped>
 #nav {
-  margin: 20px;
+  margin: 12px;
   text-align: center;
 }
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
-  font-size: 1.5rem;
+  color: #fff;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
