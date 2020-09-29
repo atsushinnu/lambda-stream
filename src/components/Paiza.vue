@@ -1,8 +1,5 @@
 <template>
   <div class="result">
-    <div class="info">
-      <button type="submit" v-on:click="post_create()">実行</button>
-    </div>
     <div v-show="loading">コンパイル中</div>
     {{ result_sentence }}
   </div>
