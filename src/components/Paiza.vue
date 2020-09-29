@@ -1,7 +1,7 @@
 <template>
   <div class="paiza">
     <div v-show="loading" class="font-mini">コンパイル中...</div>
-    <pre class="result text-left p-2">
+    <pre class="result text-left p-2" v-show='!result_sentence==""'>
 {{ result_sentence }}
     </pre>
   </div>

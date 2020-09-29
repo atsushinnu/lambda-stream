@@ -2,7 +2,7 @@
   <div id="nav">
     <Slide right :closeOnNavigation="true">
       <div class="nav-link">
-        <router-link to="/first">ラムダ＆StreamAPI</router-link>
+        <router-link to="/">ラムダ＆StreamAPI</router-link>
       </div>
       <div class="nav-link">
         <router-link to="/second">中間操作とは</router-link>
