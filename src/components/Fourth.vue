@@ -2,7 +2,7 @@
   <div>
     <span>関数型インターフェース</span>
     <div class="con mt-1">
-      <div class="item">
+      <div class="item mr-2">
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS-hSv1INS5Oe8iQ6Z4_tT0FnFy_RsXk-bjmMgTA3SlMA8AHsERTGeKy0sT7KEO51KpKqSRl5UC1Ot5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="801" height="509" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
       <div class="item">

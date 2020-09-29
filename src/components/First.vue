@@ -1,18 +1,16 @@
 <template>
   <div>
     <span>Javaラムダ＆StreamAPI</span>
-    <div class="con mt-1">
-      <div class="item">
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT7moeoiQ8gXMs1NCjWoGlmzVVmLgR9DWvsmphxpdS3jeP0teeppFHBBirjhDfaCWmBbMMDP1UWXPbr/embed?start=false&loop=false&delayms=3000" frameborder="0" width="801" height="509" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <div class="">
+      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT7moeoiQ8gXMs1NCjWoGlmzVVmLgR9DWvsmphxpdS3jeP0teeppFHBBirjhDfaCWmBbMMDP1UWXPbr/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+    <div class="item">
+      <div class="editer-wrapper">
+        <editor editor-id="1" @change-content="editor_content = $event" :content="editor_content"></editor>
       </div>
-      <div class="item">
-        <div class="editer-wrapper">
-          <editor editor-id="1" @change-content="editor_content = $event" :content="editor_content"></editor>
-        </div>
-        <div class="console">
-          <Paiza :content="editor_content"></Paiza>
-          <button @click="reset" class="btn btn-warning text-white py-1 px-3">リセット</button>
-        </div>
+      <div class="console">
+        <Paiza :content="editor_content"></Paiza>
+        <button @click="reset" class="btn btn-warning text-white py-1 px-3">リセット</button>
       </div>
     </div>
   </div>

@@ -2,7 +2,7 @@
   <div>
     <span>終端操作とは</span>
     <div class="con mt-1">
-      <div class="item">
+      <div class="item mr-2">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ3DA8XPeVDpdWOsUvwjTV8TWYE3f689YmyQwwcvcM-ntQdMsMOI45GzOS_1kvwvU5vGKhQPulmQL6Y/embed?start=false&loop=false&delayms=3000" frameborder="0" width="801" height="509" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
       <div class="item">
