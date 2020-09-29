@@ -9,13 +9,12 @@
         <editor editor-id="1" @change-content="editor_content = $event" :content="editor_content"></editor>
       </div>
       <div class="item">
-        <div class="editer-wrapper">
-          <editor editor-id="1" @change-content="editor_content = $event" :content="editor_content"></editor>
-        </div>
         <div class="console">
-          <Paiza ref="paiza" :content="editor_content"></Paiza>
-          <button @click="reset" class="btn btn-warning text-white py-1 px-3">Reset</button>
-          <button @click="call_paiza_method()" class="btn-square-pop">実行</button>
+          <button @click="call_paiza_method()" class="btn btn-primary py-1 px-3 mr-3">実行</button>
+          <button @click="reset" class="btn btn-warning text-white py-1 px-3">リセット</button>
+          <div class="my-3">
+            <Paiza ref="paiza" :content="editor_content"></Paiza>
+          </div>
         </div>
       </div>
     </div>
@@ -57,16 +56,12 @@ export default {
 <style scoped>
 .editor-wrapper {
   width: 100%;
-  height: 30%;
+  height: 70%;
 }
 .console {
   width: 100%;
   height: 30%;
-  margin-top: 15%;
   font-size: 1.2rem;
-  overflow: auto;
-  background-color: black;
-  color: #fff;
 }
 .editor {
   width: 90%;

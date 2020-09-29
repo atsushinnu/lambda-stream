@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="paiza">
     <div v-show="loading" class="font-mini">コンパイル中...</div>
-    <pre class="result">
+    <pre class="result text-left p-2">
 {{ result_sentence }}
     </pre>
   </div>
@@ -144,5 +144,10 @@ export default {
 <style scoped>
 .result {
   margin: 0;
+  background-color: #272822;
+  color: #F8F8F2;
+}
+.paiza {
+  overflow: auto;
 }
 </style>

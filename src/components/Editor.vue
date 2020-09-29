@@ -1,5 +1,5 @@
 <template>
-    <div class="editor" style="width: 100%; height: 200%;" :id="editorId "></div>
+    <div class="editor" style="width: 100%; height: 100%;" :id="editorId "></div>
 </template>
 
 <script>
@@ -48,9 +48,8 @@ export default {
 <style scoped>
 
 .editor {
-  height: 120px;
-  width:1500px;
   text-align: left;
+  /* height: 300px; */
 }
 
 </style>
