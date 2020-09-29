@@ -8,7 +8,7 @@
       <div class="editor-wrapper">
         <editor editor-id="1" @change-content="editor_content = $event" :content="editor_content"></editor>
       </div>
-      <div class="item">
+      <div class="item my-2">
         <div class="console">
           <button @click="call_paiza_method()" class="btn btn-primary py-1 px-3 mr-3">実行</button>
           <button @click="reset" class="btn btn-warning text-white py-1 px-3">リセット</button>
