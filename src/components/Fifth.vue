@@ -1,8 +1,8 @@
 <template>
   <div>
-    <span>関数型インターフェース</span>
+    <span>中間操作</span>
     <div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS-hSv1INS5Oe8iQ6Z4_tT0FnFy_RsXk-bjmMgTA3SlMA8AHsERTGeKy0sT7KEO51KpKqSRl5UC1Ot5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTBvvYGq38_GB1qH7eWRZ-8zmHCNZc9xF9gXzWe4gUcMOlhIUubn03wERAHfjeUkehT3EVcZ_jNbZd_/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
     <div class="editor">
       <div class="editor-wrapper">
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      editor_content:
+      editor_content: 
       'import java.util.*;'+'\n'+'\n'+'//練習用にお使いください'+''+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+''+'\n'+'  \n'+'  }'+'\n'+'}'
     }
   },
@@ -64,3 +64,6 @@ export default {
   margin: 10px auto;
 }
 </style>
+
+
+

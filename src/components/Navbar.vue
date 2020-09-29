@@ -2,19 +2,25 @@
   <div id="nav">
     <Slide right :closeOnNavigation="true">
       <div class="nav-link">
-        <router-link to="/">ラムダ＆StreamAPI</router-link>
+        <router-link to="/">ジェネリクス</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/second">中間操作とは</router-link>
+        <router-link to="/second">関数型インターフェース</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/third">終端操作とは</router-link>
+        <router-link to="/third">ラムダ</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/fourth">関数型インターフェース</router-link>
+        <router-link to="/fourth">StreamAPI</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/question">問題</router-link>
+        <router-link to="/fifth">中間操作</router-link>
+      </div>
+      <div class="nav-link">
+        <router-link to="/sixth">終端操作</router-link>
+      </div>
+      <div class="nav-link">
+        <router-link to="/question">練習問題&参考解答集</router-link>
       </div>
     </Slide>
   </div>
