@@ -1,8 +1,8 @@
 <template>
   <div>
-    <span>Javaラムダ＆StreamAPI</span>
+    <span>ジェネリクス</span>
     <div>
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQqF857LTJbkUNbo1eMCnq29l3ITXCfnzVKZy8ItWSGS5WYxM-fMBmAan4O5V3wN3hkJZp4d-qhRcuI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTLHo-gGC0e4sP9-o9oCds3Wg4v2aQgsUuUpm40p1ixgnUljvh4Ppt7UOeD5b38JErj1LQDZ4CGXGOe/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
     <div class="editor">
       <div class="editor-wrapper">
@@ -33,13 +33,13 @@ export default {
   data() {
     return {
       editor_content: 
-      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'\n'+'//練習用にお使いください'+''+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+''+'\n'+'  \n'+'  }'+'\n'+'}'
+      'import java.util.*;'+'\n'+'\n'+'//練習用にお使いください'+''+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+''+'\n'+'  \n'+'  }'+'\n'+'}'
     }
   },
   methods: {
     reset() {
       this.editor_content = 
-      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'\n'+'//練習用にお使いください'+''+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+''+'\n'+'  \n'+'  }'+'\n'+'}'
+      'import java.util.*;'+'\n'+'\n'+'//練習用にお使いください'+''+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+''+'\n'+'  \n'+'  }'+'\n'+'}'
     },
     call_paiza_method() {
       this.$refs.paiza.post_create()
