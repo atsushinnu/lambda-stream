@@ -4,7 +4,7 @@
     <router-link to="/first">ラムダ＆StreamAPI</router-link> |
     <router-link to="/second">中間操作とは</router-link> |
     <router-link to="/third">終端操作とは</router-link> |
-    <router-link to="/">問題</router-link>
+    <router-link to="/question">問題</router-link>
   </div>
 </template>
 
