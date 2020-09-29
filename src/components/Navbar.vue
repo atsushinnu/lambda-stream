@@ -14,7 +14,7 @@
         <router-link to="/fourth">関数型インターフェース</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/">問題</router-link>
+        <router-link to="/question">問題</router-link>
       </div>
     </Slide>
   </div>
