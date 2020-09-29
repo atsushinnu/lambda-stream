@@ -9,8 +9,9 @@
           <editor editor-id="1" @change-content="editor_content = $event" :content="editor_content"></editor>
         </div>
         <div class="console">
-          <Paiza :content="editor_content"></Paiza>
+          <Paiza ref="paiza" :content="editor_content"></Paiza>
           <button @click="reset" class="btn-square-pop">Reset</button>
+          <button @click="call_paiza_method()" class="btn-square-pop">実行</button>
         </div>
       </div>
     </div>
@@ -44,6 +45,9 @@ export default {
             '  }'+ '\n' +
           ' }'+ '\n' +
         '}'
+    },
+    call_paiza_method() {
+      this.$refs.paiza.post_create()
     },
   },
 };
