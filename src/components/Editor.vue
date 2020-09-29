@@ -30,7 +30,7 @@ export default {
     // mode-xxx.js or theme-xxx.jsがある場合のみ有効
     this.editor.getSession().setMode(`ace/mode/${lang}`)
     this.editor.setTheme(`ace/theme/${theme}`)
-    this.editor.setFontSize(12)
+    this.editor.setFontSize(14)
     this.editor.setOptions({
       enableBasicAutocompletion: true,
       enableSnippets: true,
