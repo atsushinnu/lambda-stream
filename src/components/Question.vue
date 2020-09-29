@@ -12,7 +12,7 @@
           <Paiza :content="editor_content"></Paiza>
           <button @click="reset" class="btn-square-pop">Reset</button>
         </div>
-        <div v-show="this.int<=3">
+        <div v-show="this.int<=10">
           <button @click="increment()" class="btn-square-pop">次の問題</button>
         </div>
         <div v-show="this.int>=1">
@@ -35,8 +35,31 @@ export default {
   data() {
     return {
       editor_content: "",
-      questions: ['import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+''+'\n'+'/*'+'\n'+'streamAPIとreduceメソッドを用いて以下のコレクションの各要素要素の文字数を合計しなさい。'+'\n'+'*但し合計処理の途中で各要素の文字数を出力すること。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var integerList = new ArrayList<String>(Arrays.asList("All for one", "Level up", "Over Drive", "High motivation", "Agile partner"));'+'\n'+''+'\n'+'  var multipliedInteger = integerList.stream()'+'\n'+'                                     .parallel()'+'\n'+'                                     .reduce(0, //第一引数:初期値'+'\n'+'                                            (result, element) -> result + element.length(), //第二引数 中間処理'+'\n'+'                                            //並列処理される順序は保証されません'+'\n'+'                                            (e1, e2) -> {                         // △'+'\n'+'                                              System.out.println("length:" + e1); // | 第三引数(関数)'+'\n'+'                                              return e1 + e2;                     // | ここの関数に処理(今回はprintln)を差込む場合並列処理でないと実行されない'+'\n'+'                                            }                                     // ▽'+'\n'+'                                      );                 '+'\n'+'  System.out.println(multipliedInteger); '+'\n'+'  }'+'\n'+'}'+'\n'+''+'\n'
-,'python','cerenium','vue.js','C++'],
+      questions: [
+       'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'以下に用意したコレクションから、Filterを用いて99以下の値を持つ要素を排除して標準出力に出力しなさい'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'    var numList = new ArrayList<Integer>(Arrays.asList(100, 99, 200, 300, 50, 400));'+'\n'+''+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.Comparator;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'以下に用意したコレクションをstreamAPIを用いて降順にsortし、パイプライン処理中に出力しsort出来ているか確認しなさい'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'    var numList = new ArrayList<Integer>(Arrays.asList(100, 99, 200, 300, 50, 400));'+'\n'+''+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.Comparator;'+'\n'+''+'\n'+'/*'+'\n'+'以下に用意したコレクションをstreamAPIを用いて重複を削除したのち降順にsortし、パイプライン処理中に出力し確認しなさい'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'    var numList = new ArrayList<Integer>(Arrays.asList(100,100, 99, 200, 300, 50, 400, 99, 200));'+'\n'+''+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'以下に用意したコレクションの各値が、"JavaScript"に一致するものがあれば"Java"に変換し、新しいコレクションとして定義し標準出力に出力しなさい。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var languageList = new ArrayList<String>(Arrays.asList("GOlang","COBOL", "JavaScript", "C", "Python", "VBA", "Swift", "C#", "PHP"));'+'\n'+'  '+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.function.Function;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'文字列の末尾に"株式会社"を追加するFunctionメソッドをラムダ式で実装し、'+'\n'+'*それを用いて以下に用意したコレクションの各値を操作し新しいコレクションとして定義し標準出力に出力しなさい。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var companyList = new ArrayList<String>(Arrays.asList("ALH","カルビー", "キユーピー", "凸版印刷", "山崎製パン", "東京エレクトロン"));'+'\n'+'  '+'\n'+''+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+''+'\n'+'/*'+'\n'+'以下のコレクションの各要素に"印刷"という文字列を含む値が存在するかどうかを、真偽値で出力する処理をstreamAPIとラムダ式を用いて定義しなさい。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var companyList = new ArrayList<String>(Arrays.asList("ALH","カルビー", "キユーピー", "凸版印刷", "山崎製パン", "東京エレクトロン"));'+'\n'+'  '+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'以下のコレクションの各値が前株（株式会社〇〇）かどうかを判定し、その結果をboolean型のリストにして各要素を出力しなさい。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var companyList = new ArrayList<String>(Arrays.asList("ALH株式会社","株式会社SHIFT", "キユーピー株式会社", "凸版印刷株式会社", "株式会社リクルートホールディングス"));'+'\n'+''+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'以下のコレクションの各値が前株（株式会社〇〇）かどうかを判定し、その結果をvalueとしたMapを定義して出力しなさい。'+'\n'+'*なお、key値は判定元の文字列をそのまま使用すること(1つ目の要素であれば {ALH株式会社=:false})'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var companyList = new ArrayList<String>(Arrays.asList("ALH株式会社","株式会社SHIFT", "キユーピー株式会社", "凸版印刷株式会社", "株式会社リクルートホールディングス"));'+'\n'+'  '+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'以下のコレクションの各値が前株（株式会社〇〇）かどうかを判定し、その結果をvalueとしたMapを定義して出力しなさい。'+'\n'+'*なお、keyは判定元の文字列をそのまま使用する(1つ目の要素であれば {key:"ALH株式会社",value:false})'+'\n'+'*ただし、重複した値が存在してもエラーにならないよう考慮すること。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var companyList = new ArrayList<String>(Arrays.asList("ALH株式会社","株式会社SHIFT", "株式会社SHIFT", "キユーピー株式会社", "凸版印刷株式会社", "株式会社リクルートホールディングス"));'+'\n'+'  '+'\n'+'}'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+''+'\n'+'/*'+'\n'+'以下に用意したコレクションの各要素を乗算した結果をstreamAPIとreduceメソッドを用いて'+'\n'+'*新たな変数に格納して標準出力に出力しなさい。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var integerList = new ArrayList<Integer>(Arrays.asList(5, 10, 15, 20, 25));'+'\n'+''+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+''+'\n'+'/*'+'\n'+'以下の数値型のコレクション要素をstreamAPIのreduceメソッドを用いてそれぞれ乗算していったものに出力しなさい。'+'\n'+'*但しreduce処理の初期値として5を与えること。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var integerList = new ArrayList<Integer>(Arrays.asList(5, 10, 15, 20, 25));'+'\n'+'  '+'//以下に処理を記載しなさい'+'\n'+'  }'+'\n'+'}'
+      ,
+      'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+''+'\n'+'/*'+'\n'+'streamAPIとreduceメソッドを用いて以下のコレクションの各要素の文字数を合計しなさい。'+'\n'+'*但し合計処理の途中で各要素の文字数を出力すること。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'  var integerList = new ArrayList<String>(Arrays.asList("All for one", "Level up", "Over Drive", "High motivation", "Agile partner"));'+'\n'+'  '+'//以下に処理を記載しなさい'+'\n'+'  }'+'\n'+'}'
+      ],
       int : 0,
       error_message : "",
     }
@@ -49,7 +72,7 @@ export default {
       this.editor_content = this.questions[this.int]
     },
     increment(){
-      if(this.int <= 3){
+      if(this.int <= 10){
         this.int++
         this.editor_content = this.questions[this.int]
       } else {
