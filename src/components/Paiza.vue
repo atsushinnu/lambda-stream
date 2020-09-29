@@ -1,10 +1,12 @@
 <template>
-  <div class="result">
-    <div class="info">
-      <button type="submit" v-on:click="post_create()">実行</button>
+  <div>
+    <div class="info mb-2">
+      <button type="submit" v-on:click="post_create()" class="btn btn-primary py-1 px-3">実行</button>
     </div>
-    <div v-show="loading">コンパイル中</div>
-    {{ result_sentence }}
+    <div v-show="loading" class="font-mini">コンパイル中...</div>
+    <pre class="result">
+{{ result_sentence }}
+    </pre>
   </div>
 </template>
 
@@ -141,3 +143,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.result {
+  margin: 0;
+}
+</style>

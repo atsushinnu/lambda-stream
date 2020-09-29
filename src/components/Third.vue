@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="container">
+    <span>終端操作とは</span>
+    <div class="con mt-1">
       <div class="item">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ3DA8XPeVDpdWOsUvwjTV8TWYE3f689YmyQwwcvcM-ntQdMsMOI45GzOS_1kvwvU5vGKhQPulmQL6Y/embed?start=false&loop=false&delayms=3000" frameborder="0" width="801" height="509" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       </div>
@@ -10,7 +11,7 @@
         </div>
         <div class="console">
           <Paiza :content="editor_content"></Paiza>
-          <button @click="reset" class="btn-square-pop">Reset</button>
+          <button @click="reset" class="btn btn-warning text-white py-1 px-3">リセット</button>
         </div>
       </div>
     </div>
@@ -50,9 +51,10 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.con {
   display: inline-flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 .editer-wrapper {
   width: 500px;
@@ -66,33 +68,4 @@ export default {
   overflow: auto;
 }
 
-button{
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  appearance: none;
-}
-
-.btn-square-pop {
-  position: relative;
-  display: inline-block;
-  padding: 0.5em 1.5em;
-  text-decoration: none;
-  color: #FFF;
-  background: #fd9535;/*背景色*/
-  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
-  border-radius: 4px;/*角の丸み*/
-  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-.btn-square-pop:active {
-  border-bottom: solid 2px #fd9535;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
-}
-
 </style>
-

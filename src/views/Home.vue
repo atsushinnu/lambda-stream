@@ -1,7 +1,8 @@
 
 <template>
   <div class="home">
-    <h1>ホーム画面</h1>
+    <p>スライドを読みながら</p>
+    <p>エディターに入力</p>
   </div>
 </template>
 
