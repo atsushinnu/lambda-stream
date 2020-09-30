@@ -1,14 +1,21 @@
 <!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge">
-  <script>(function (l) {
-    if (l.search) {
+  <meta name=viewport content="width=device-width,initial-scale=1"><title>Javaラムダ&StreamAPI</title><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/mode-java.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/theme-monokai.js defer></script><link href=css/about.32d9d047.css rel=prefetch><link href=js/about.0ebaa9bc.js rel=prefetch><link href=css/app.dff8ff1b.css rel=preload as=style><link href=css/chunk-vendors.3cee8d61.css rel=preload as=style><link href=js/app.73cecfa4.js rel=preload as=script><link href=js/chunk-vendors.80d2023f.js rel=preload as=script><link href=css/chunk-vendors.3cee8d61.css rel=stylesheet><link href=css/app.dff8ff1b.css rel=stylesheet>
+  <script type="text/javascript">
+    (function(l) {
+      if (l.search) {
         var q = {};
-        l.search.slice(1).split('&').forEach(function (v) { 
-            var a = v.split('=');
-            q[a[0]] = a[1];
+        l.search.slice(1).split('&').forEach(function(v) {
+          var a = v.split('=');
+          q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
         });
         if (q.p !== undefined) {
-            window.history.replaceState(null, null, l.pathname.slice(0, -1) + (q.p || ''));
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (q.p || '') +
+            (q.q ? ('?' + q.q) : '') +
+            l.hash
+          );
         }
-    }
-}(window.location))</script>
-  <meta name=viewport content="width=device-width,initial-scale=1"><title>Javaラムダ&StreamAPI</title><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/mode-java.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/theme-monokai.js defer></script><link href=css/about.32d9d047.css rel=prefetch><link href=js/about.0ebaa9bc.js rel=prefetch><link href=css/app.dff8ff1b.css rel=preload as=style><link href=css/chunk-vendors.3cee8d61.css rel=preload as=style><link href=js/app.73cecfa4.js rel=preload as=script><link href=js/chunk-vendors.80d2023f.js rel=preload as=script><link href=css/chunk-vendors.3cee8d61.css rel=stylesheet><link href=css/app.dff8ff1b.css rel=stylesheet></head><body><noscript><strong>We're sorry but lambda-stream2 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=js/chunk-vendors.80d2023f.js></script><script src=js/app.73cecfa4.js></script></body></html>
+      }
+    }(window.location))
+  </script>
+</head><body><noscript><strong>We're sorry but lambda-stream2 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=js/chunk-vendors.80d2023f.js></script><script src=js/app.73cecfa4.js></script></body></html>
