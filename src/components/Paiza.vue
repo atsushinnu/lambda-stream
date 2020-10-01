@@ -43,7 +43,7 @@ export default {
     post_create() {
       this.loading = true;
 
-      const API_CREATE_URL = "http://api.paiza.io/runners/create";
+      const API_CREATE_URL = "https://api.paiza.io/runners/create";
 
       axios
         .post(API_CREATE_URL, {
@@ -70,7 +70,7 @@ export default {
     async get_status() {
       //paiza.io APIのコンパイル処理時間を待つための遅延
       await this.sleep(2000);
-      const API_CONFIRM_URL = "http://api.paiza.io/runners/get_status";
+      const API_CONFIRM_URL = "https://api.paiza.io/runners/get_status";
 
       const API_CONFIRM_PARAM = {
         id: this.create_result.id,
@@ -97,7 +97,7 @@ export default {
       await this.get_status();
 
       console.log("3番目");
-      const API_RESULT_URL = "http://api.paiza.io/runners/get_details";
+      const API_RESULT_URL = "https://api.paiza.io/runners/get_details";
 
       const API_CONFIRM_PARAM = {
         id: this.create_result.id,
