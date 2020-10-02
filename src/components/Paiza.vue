@@ -57,7 +57,6 @@ export default {
 
         .then((response) => {
           this.create_result = response.data;
-          console.log(response.data);
           this.sleep = (msec) =>
             new Promise((resolve) => setTimeout(resolve, msec));
           this.get_detail();
@@ -84,19 +83,12 @@ export default {
 
         .then((response) => {
           this.status_result = response.data;
-          console.log("1.5番目" + this.status_result.status);
         })
-        .catch((err) => {
-          console.log("err:", err);
-        });
-      console.log("2番目");
     },
 
     async get_detail() {
-      console.log("1番目");
       await this.get_status();
 
-      console.log("3番目");
       const API_RESULT_URL = "https://api.paiza.io/runners/get_details";
 
       const API_CONFIRM_PARAM = {
@@ -115,9 +107,6 @@ export default {
 
           .then((response) => {
             this.detail_result = response.data;
-            console.log(response.data);
-            console.log(this.detail_result.build_result);
-            console.log(this.detail_result.build_stderr);
             if (this.detail_result.result == "success") {
               this.result_sentence =
                 "【実行結果】" + "\n" + this.detail_result.stdout;
@@ -129,10 +118,6 @@ export default {
                 "【例外発生】" + "\n" + this.detail_result.stderr;
             }
           })
-          .catch((err) => {
-            console.log("err:", err);
-            this.result_sentence = "【エラー】"+ "\n" + "結果を取得できませんでした。再度実行してください。";
-          });
       } else {
         this.result_sentence = "【エラー】"+ "\n" + "結果を取得できませんでした。再度実行してください。";
       }
