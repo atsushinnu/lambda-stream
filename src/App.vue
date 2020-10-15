@@ -39,6 +39,7 @@ pre {
   text-align: center;
   font-size: 25px;
 }
+
 .site-title {
   font-size: 2rem;
   font-weight: bold;

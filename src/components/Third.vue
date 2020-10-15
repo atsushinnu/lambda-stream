@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>ラムダ</span>
+    <span>3. ラムダ</span>
     <div>
       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTcC196gidv1hLHIOZ1Uye4KwirCS4sUr5XocEq6RhhFsybsL9U_vOr8gVevvS4z4U1k48gJ1fjlFRN/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>

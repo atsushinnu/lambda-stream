@@ -2,25 +2,30 @@
   <div id="nav">
     <Slide right :closeOnNavigation="true">
       <div class="nav-link">
-        <router-link to="/">ジェネリクス</router-link>
+        <router-link to="/">1. ジェネリクス</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/second">関数型インターフェース</router-link>
+        <router-link to="/second">2. 関数型インターフェース</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/third">ラムダ</router-link>
+        <router-link to="/third">3. ラムダ</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/fourth">StreamAPI</router-link>
+        <router-link to="/fourth">4. StreamAPI</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/fifth">中間操作</router-link>
+        <router-link to="/fifth">5. 中間操作</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/sixth">終端操作</router-link>
+        <router-link to="/sixth">6. 終端操作</router-link>
       </div>
       <div class="nav-link">
-        <router-link to="/question">練習問題&参考解答集</router-link>
+        <router-link to="/question">7. 練習問題&参考解答集</router-link>
+      </div>
+      <br>
+      <br>
+      <div class="nav-link">
+        <router-link to="/contact">お問い合わせ</router-link>
       </div>
     </Slide>
   </div>
@@ -39,7 +44,6 @@ export default {
 <style scoped>
 #nav {
   margin: 12px;
-  text-align: center;
 }
 #nav a {
   font-weight: bold;

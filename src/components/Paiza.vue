@@ -4,17 +4,13 @@
     <pre class="result text-left p-2" v-show='!result_sentence==""'>
 {{ result_sentence }}
     </pre>
-    <div class="footer">
-      <Footer></Footer>
-    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import Footer from "./Footer";
 export default {
-  components: {Footer},
+  components: {},
   props: ["content"],
   data() {
     return {
