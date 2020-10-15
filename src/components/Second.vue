@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>関数型インターフェース</span>
+    <span>2. 関数型インターフェース</span>
     <div>
       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS-hSv1INS5Oe8iQ6Z4_tT0FnFy_RsXk-bjmMgTA3SlMA8AHsERTGeKy0sT7KEO51KpKqSRl5UC1Ot5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>

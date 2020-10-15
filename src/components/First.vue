@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>ジェネリクス</span>
+    <span>1. ジェネリクス</span>
     
     <div>
       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTLHo-gGC0e4sP9-o9oCds3Wg4v2aQgsUuUpm40p1ixgnUljvh4Ppt7UOeD5b38JErj1LQDZ4CGXGOe/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
