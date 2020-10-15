@@ -7,15 +7,18 @@
     <div class="main-content">
       <router-view></router-view>
     </div>
+    <Footer></Footer>
+
   </div>
 </template>
 
 <script>
 import navbar from "./components/Navbar";
-
+import Footer from "./components/Footer";
 export default {
   components: {
     navbar,
+    Footer,
   }
 }
 </script>
