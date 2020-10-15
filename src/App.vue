@@ -38,7 +38,6 @@ pre {
 .main-content {
   text-align: center;
   font-size: 25px;
-  height: 1500px;
 }
 .site-title {
   font-size: 2rem;
