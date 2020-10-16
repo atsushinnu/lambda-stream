@@ -25,7 +25,7 @@
       <br>
       <br>
       <div class="nav-link">
-        <router-link to="/contact">お問い合わせ</router-link>
+        <router-link to="/contact">ご意見・ご要望</router-link>
       </div>
     </Slide>
   </div>
