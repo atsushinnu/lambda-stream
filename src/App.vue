@@ -1,31 +1,36 @@
 <template>
   <div id="app">
-    <div class="site-title-wrapper">
-      <span class="site-title">Javaラムダ＆StreamAPI</span>
-    </div>
-    <navbar />
     <div class="main-content">
-      <router-view></router-view>
+      <div class="sidebar">
+        <div class="sidebar__item">
+          <scrollbar />
+        </div>
+      </div>
+      <div class="router">
+        <router-view></router-view>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import navbar from "./components/Navbar";
+import scrollbar from "./components/Scrollbar";
 export default {
   components: {
-    navbar,
-  }
-}
+    scrollbar,
+  },
+};
 </script>
 
 <style>
 body {
   margin: 0;
-  font-family: "Meiryo", "メイリオ", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro","sans-serif";
+  font-family: "Meiryo", "メイリオ", "游ゴシック体", "Yu Gothic", YuGothic,
+    "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "sans-serif";
 }
 pre {
-  font-family: "Meiryo", "メイリオ", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro","sans-serif";
+  font-family: "Meiryo", "メイリオ", "游ゴシック体", "Yu Gothic", YuGothic,
+    "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "sans-serif";
   margin-bottom: 0;
 }
 #app {
@@ -38,40 +43,37 @@ pre {
 .main-content {
   text-align: center;
   font-size: 25px;
+  display: flex;
+  margin-top: 30px;
 }
 
-.site-title {
-  font-size: 2rem;
-  font-weight: bold;
+.router{
+  display: block;
+  width: 1600px;
 }
-.site-title-wrapper {
-  margin: 15px;
+
+.sidebar {
+  width: 300px;
 }
-/*スクロールバー全体*/
-::-webkit-scrollbar {
-    width: 10px;
+.sidebar__item {
+  margin-bottom: 20px;
+  position: sticky;
+  margin-bottom: 0;
+  top: 10px;
+  z-index: 1;
+  font-size: 18px;
 }
-/*スクロールバーの軌道*/
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
-}
-/*スクロールバーの動く部分*/
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 50, .5);
-  border-radius: 10px;
-  box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
-}
-.container{
+
+.container {
   width: 100%;
   height: 400px;
   overflow: auto;
 }
-.inner{
+.inner {
   background-image: url("http://lorempixel.com/800/800/");
   background-repeat: no-repeat;
-  width:100%;
-  height:800px;
+  width: 100%;
+  height: 800px;
 }
 
 /* フォントサイズ */
