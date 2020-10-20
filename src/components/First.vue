@@ -48,6 +48,7 @@ export default {
       this.$refs.paiza.post_create()
     },
   },
+
 };
 </script>
 

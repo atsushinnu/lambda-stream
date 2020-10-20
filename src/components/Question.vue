@@ -6,7 +6,7 @@
       </div>
       <div class="editor mb-3">
         <div class="editor-wrapper">
-          <editor editor-id="1" @change-content="editor_content = $event" :content="editor_content"></editor>
+          <editor editor-id="1" @change-content="changeEditor" :content="editor_content"></editor>
         </div>
         <div class="item my-2">
           <div class="console">
@@ -37,6 +37,7 @@ export default {
   data() {
     return {
       editor_content: "",
+      isEdited : false,
       questions: [
        'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+'import java.util.stream.Collectors;'+'\n'+''+'\n'+'/*'+'\n'+'【問1】以下に用意したコレクションから、Filterを用いて99以下の値を持つ要素を排除して標準出力に出力しなさい'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'    var numList = new ArrayList<Integer>(Arrays.asList(100, 99, 200, 300, 50, 400));'+'\n'+'  '+'  //以下に処理を記載しなさい'+'\n'+'  }'+'\n'+'}'
       ,
@@ -68,10 +69,15 @@ export default {
   },
   created: function () {
     this.editor_content = this.questions[this.int]
+    this.isEdited = false
   },
   methods: {
     reset() {
       this.editor_content = this.questions[this.int]
+    },
+    changeEditor(...args){
+      this.editor_content = args[0]
+      this.isEdited = args[1]
     },
     call_paiza_method() {
       this.$refs.paiza.post_create()
@@ -93,6 +99,18 @@ export default {
       }
     },
   },
+  beforeRouteLeave (to, from, next) {
+    if(this.isEdited){
+      let answer = window.confirm("編集したデータが失われます。よろしいですか？")
+      if (answer) {
+        next()
+      } else {
+        next(false)
+      }
+    }else{
+      next()
+    }
+  }
 };
 </script>
 
