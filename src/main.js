@@ -16,6 +16,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI, { locale })
 Vue.use(Bootstrap)
 
+
 new Vue({
   router,
   render: h => h(App),
