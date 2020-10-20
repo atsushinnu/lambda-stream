@@ -40,8 +40,8 @@ export default {
 
     this.editor.on('change', () => {
       this.beforeContent = this.editor.getValue()
-      this.$emit('change-content', this.editor.getValue(), this.isEdited)
       this.isEdited = true
+      this.$emit('change-content', this.editor.getValue(), this.isEdited)
     })
   }
 }
