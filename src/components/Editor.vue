@@ -4,16 +4,25 @@
 
 <script>
 export default {
-  props: ['editorId','content', 'lang', 'theme'],
+  props: ['editorId','content', 'lang', 'theme', 'isEdited', 'isReseted'],
   data() {
     return {
+      editorIsEdited : false,
+      editorIsReseted : false,
       editor: Object,
       beforeContent: '',
-      isEdited: false,
     }
   },
   watch: {
     'content'(value) {
+      this.editorIsEdited = this.isEdited
+      this.editorIsReseted = this.isReseted
+      if(this.editorIsReseted){
+        this.editorIsEdited = false
+        this.editorIsReseted = false
+      }else{
+        this.editorIsEdited = true
+      }
       if (this.beforeContent != value) {
         this.editor.setValue(value, 1)
       }
@@ -39,9 +48,9 @@ export default {
     });
 
     this.editor.on('change', () => {
+      console.log(" 子である  "+this.editorIsEdited)
       this.beforeContent = this.editor.getValue()
-      this.isEdited = true
-      this.$emit('change-content', this.editor.getValue(), this.isEdited)
+      this.$emit('change-content', this.editor.getValue(), this.editorIsEdited, this.editorIsReseted)
     })
   }
 }
