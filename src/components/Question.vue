@@ -64,6 +64,7 @@ export default {
       ],
       int : 0,
       error_message : "",
+      isEdited : false,
     }
   },
   created: function () {
@@ -93,6 +94,17 @@ export default {
       }
     },
   },
+    beforeRouteLeave (to, from, next) {
+    if(this.beforeEdit){
+      let answer = window.confirm("編集したデータが失われます。よろしいですか？")
+      if (answer) {
+        next()
+      } else {
+        next(false)
+      }
+    }
+    next()
+  }
 };
 </script>
 

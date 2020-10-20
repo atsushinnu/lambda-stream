@@ -8,7 +8,8 @@ export default {
   data() {
     return {
       editor: Object,
-      beforeContent: ''
+      beforeContent: '',
+      isEdited: false,
     }
   },
   watch: {
@@ -39,7 +40,8 @@ export default {
 
     this.editor.on('change', () => {
       this.beforeContent = this.editor.getValue()
-      this.$emit('change-content', this.editor.getValue())
+      this.$emit('change-content', this.editor.getValue(), this.isEdited)
+      this.isEdited = true
     })
   }
 }
