@@ -78,7 +78,6 @@ export default {
     changeEditor(...args){
       this.editor_content = args[0]
       this.isEdited = args[1]
-      console.log(args[1])
     },
     call_paiza_method() {
       this.$refs.paiza.post_create()
