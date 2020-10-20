@@ -10,8 +10,8 @@
         </div>
         <div class="item my-2">
           <div class="console">
-            <button @click="call_paiza_method()" class="btn btn-primary py-1 px-3 mr-3">処理実行</button>
-            <button @click="reset()" class="btn btn-warning text-white py-1 px-3">リセット</button>
+            <button @click="call_paiza_method()" class="btn btn-primary py-1 px-3 mr-5">処理実行</button>
+            <button @click="reset()" class="btn btn-warning text-white py-1 px-3 ml-3">リセット</button>
           </div>
           <Paiza ref="paiza" :content="editor_content" class="my-2"></Paiza>
           <span v-show="this.int>=1">
