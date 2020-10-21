@@ -80,6 +80,7 @@ export default {
         let answer = window.confirm("編集したデータが失われます。よろしいですか？")
         if (answer) {
           this.editor_content = this.questions[this.int]
+          this.editedContents[this.int] = this.questions[this.int]
           this.isEdited = false
           this.isReseted = true
         }
@@ -94,6 +95,7 @@ export default {
       this.$refs.paiza.post_create()
     },
     increment(){
+      this.isReseted = true
       this.editedContents[this.int] = this.editor_content
       if(this.int <= 10){
         this.int++
@@ -107,6 +109,7 @@ export default {
       }
     },
     decrement(){
+      this.isReseted = true
       if(this.int >= 1){
         this.int--
         this.editor_content = this.editedContents[this.int]
