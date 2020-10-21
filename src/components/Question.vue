@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     reset() {
-      if(this.isEdited && this.isReseted ==false){
+      if(this.questions[this.int]  != this.editor_content){
         let answer = window.confirm("編集したデータが失われます。よろしいですか？")
         if (answer) {
           this.editor_content = this.questions[this.int]
