@@ -48,7 +48,6 @@ export default {
     });
 
     this.editor.on('change', () => {
-      console.log(" 子である  "+this.editorIsEdited)
       this.beforeContent = this.editor.getValue()
       this.$emit('change-content', this.editor.getValue(), this.editorIsEdited, this.editorIsReseted)
     })

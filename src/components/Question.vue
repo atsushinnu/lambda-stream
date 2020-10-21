@@ -64,6 +64,7 @@ export default {
       ,
       'import java.util.ArrayList;'+'\n'+'import java.util.Arrays;'+'\n'+''+'\n'+'/*'+'\n'+'【問12(ラスト)】streamAPIとreduceメソッドを用いて以下のコレクションの各要素の文字数を合計しなさい。'+'\n'+'但し合計処理の途中で各要素の文字数を出力すること。'+'\n'+''+'\n'+'*/'+'\n'+'public class Main { '+'\n'+'  public static void main(String args[]) {'+'\n'+''+'\n'+'    var integerList = new ArrayList<String>(Arrays.asList("All for one", "Level up", "Over Drive", "High motivation", "Agile partner"));'+'\n'+'  '+'  //以下に処理を記載しなさい'+'\n'+'  }'+'\n'+'}'
       ],
+      editedContents:[],
       int : 0,
       error_message : "",
     }
@@ -71,20 +72,17 @@ export default {
   created: function () {
     this.editor_content = this.questions[this.int]
     this.isEdited = false
+    this.editedContents = Array(this.questions.length)
   },
   methods: {
     reset() {
-      console.log("親"+this.isEdited + " " + this.isReseted)
       if(this.isEdited && this.isReseted ==false){
         let answer = window.confirm("編集したデータが失われます。よろしいですか？")
         if (answer) {
           this.editor_content = this.questions[this.int]
           this.isEdited = false
           this.isReseted = true
-          console.log(" 親の確認をOKしたお  "+this.isEdited)
         }
-      }else{
-        console.log("リセット押したよ")
       }
     },
     changeEditor(editorContent, isEdited, isReseted){
@@ -96,9 +94,14 @@ export default {
       this.$refs.paiza.post_create()
     },
     increment(){
+      this.editedContents[this.int] = this.editor_content
       if(this.int <= 10){
         this.int++
-        this.editor_content = this.questions[this.int]
+        if(this.editedContents[this.int] == null){
+          this.editor_content = this.questions[this.int]
+        }else{
+          this.editor_content = this.editedContents[this.int]
+        }
       } else {
         this.error_message ="問題がありません"
       }
@@ -106,7 +109,7 @@ export default {
     decrement(){
       if(this.int >= 1){
         this.int--
-        this.editor_content = this.questions[this.int]
+        this.editor_content = this.editedContents[this.int]
       } else {
         this.error_message ="問題がありません"
       }
