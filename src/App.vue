@@ -55,7 +55,7 @@ pre {
 }
 
 .sidebar {
-  width: 300px;
+  width: 300px
 }
 .sidebar-item {
   margin-bottom: 20px;

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div>
-      <b-navbar toggleable="lg" type="light"  id="brand_title">
+      <b-navbar toggleable="lg" type="light" id="brand_title">
         <div  class="link">
             <router-link to="/">ホーム</router-link>
         </div>
@@ -32,24 +32,6 @@ export default {};
   display: inline-block;
   padding-right:  10px;
   padding-left: 10px;
-}
-#nav-collapse {
-  margin-left: auto;
-  margin-right: auto;
-}
-.nav-link {
-  font-size: 1.1em;
-  color: antiquewhite;
-}
-#icon {
-  margin-right: 10px;
-}
-.head-button-dropdown {
-  outline: none;
-}
-
-.router-link-exact-active {
-  text-decoration: none;
 }
 
 </style>
