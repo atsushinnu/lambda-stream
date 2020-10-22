@@ -69,7 +69,12 @@ export default {
   height: 100%;
 }
 .title{
-font-size: 25px;
-font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
 }
+.nav-link {
+  text-align: left;
+  margin:10px;
+}
+
 </style>
