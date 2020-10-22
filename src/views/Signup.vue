@@ -24,7 +24,7 @@
                         placeholder="Pick a month">
                       </el-date-picker>
                   </el-form-item>
-                  <span>{{form.assginedDate}}</span>
+                  <span>{{form.assginedDate | moment("YYYY-DD")}}</span>
                 </div>
                 <el-form-item label="所属地域" placeholder="Select">
                     <el-select v-model="form.branch">
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-
+import moment from "moment";
 import axios from "axios";
 export default {
   components: {
@@ -55,7 +55,7 @@ export default {
       form:{
         name:'',
         mail:'',
-        assginedDate:"2020-01-01",
+        assginedDate:"",
         password:'',
         confirmPassword:'',
         branch:'',
@@ -108,9 +108,12 @@ export default {
       .catch((error) => {
         console.log("errorです" + error);
       });
-
+  },
+  filters: {
+    moment(value, format) {
+      return moment(value).format(format);
+    }
   }
-
 };
 </script>
 
