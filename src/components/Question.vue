@@ -1,5 +1,12 @@
 <template>
-  <div class="mb-2">
+  <div class="main-view mb-2">
+    <div class="sidebar">
+        <div class="sidebar-item">
+            <scrollbar/>
+        </div>
+    </div>
+
+    <div class="router">
     <span>7. 練習問題&参考解答集</span>
       <div>
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTUfKYJGMM0nS0HZ-DrzSnoKPMssvsKugQ_2PFOO_bvBGNyGsG-K8MuL1IajHIxfs762vAJkn5u_o-1/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -22,17 +29,20 @@
           </span>
         </div>
       </div>
+    </div>
   </div>
 </template>
 
 <script>
 import Paiza from "./Paiza.vue";
 import editor from "./Editor.vue";
+import scrollbar from "./Scrollbar.vue";
 
 export default {
   components: {
     Paiza,
-    editor
+    editor,
+    scrollbar
   },
   data() {
     return {
@@ -134,6 +144,10 @@ export default {
 </script>
 
 <style scoped>
+.main-view {
+ display: flex;
+}
+
 .editor-wrapper {
   width: 100%;
   height: 70%;

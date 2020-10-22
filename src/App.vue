@@ -1,23 +1,14 @@
 <template>
   <div id="app">
     <div class="main-content">
-      <div class="sidebar">
-        <div class="sidebar__item">
-          <scrollbar />
-        </div>
-      </div>
-      <div class="router">
         <router-view></router-view>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-import scrollbar from "./components/Scrollbar";
 export default {
   components: {
-    scrollbar,
   },
 };
 </script>
@@ -43,7 +34,6 @@ pre {
 .main-content {
   text-align: center;
   font-size: 25px;
-  display: flex;
   margin-top: 30px;
 }
 
@@ -55,7 +45,7 @@ pre {
 .sidebar {
   width: 300px;
 }
-.sidebar__item {
+.sidebar-item {
   margin-bottom: 20px;
   position: sticky;
   margin-bottom: 0;
