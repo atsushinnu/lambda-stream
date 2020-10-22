@@ -6,7 +6,7 @@
         <br />
         <br />
         <div class="nav-link">
-          <router-link to="/">1. ジェネリクス</router-link>
+          <router-link to="/first">1. ジェネリクス</router-link>
         </div>
         <div class="nav-link">
           <router-link to="/second">2. 関数型インターフェース</router-link>
