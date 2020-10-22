@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "moment": "^2.29.1",
     "vue": "^2.6.11",
     "vue-burger-menu": "^2.0.5",
     "vue-router": "^3.4.5",

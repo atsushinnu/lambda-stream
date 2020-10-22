@@ -16,9 +16,16 @@
                 <el-form-item label="確認用パスワード">
                     <el-input type="password" v-model="form.confirmPassword"></el-input>
                 </el-form-item>
-                <el-form-item label="入社年月">
-                    <el-date-picker v-model="form.assginedDate" type="datetime" placeholder="日時を選択してください"></el-date-picker>
-                </el-form-item>
+                <div class="d-flex .justify-content-around">
+                  <el-form-item label="入社年月">
+                      <el-date-picker
+                        type="month"
+                        v-model="form.assginedDate"
+                        placeholder="Pick a month">
+                      </el-date-picker>
+                  </el-form-item>
+                  <span>{{form.assginedDate}}</span>
+                </div>
                 <el-form-item label="所属地域" placeholder="Select">
                     <el-select v-model="form.branch">
                       <el-option v-for="branch in branches" v-bind:key="branch.id" v-bind:value="branch.name"></el-option>
@@ -48,7 +55,7 @@ export default {
       form:{
         name:'',
         mail:'',
-        assginedDate:'',
+        assginedDate:"2020-01-01",
         password:'',
         confirmPassword:'',
         branch:'',
