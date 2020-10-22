@@ -16,6 +16,9 @@
                 <el-form-item label="確認用パスワード">
                     <el-input type="password" v-model="form.confirmPassword"></el-input>
                 </el-form-item>
+                <el-form-item label="入社年月">
+                    <el-date-picker v-model="form.assginedDate" type="datetime" placeholder="日時を選択してください"></el-date-picker>
+                </el-form-item>
                 <el-form-item label="所属地域" placeholder="Select">
                     <el-select v-model="form.branch">
                       <el-option v-for="branch in branches" v-bind:key="branch.id" v-bind:value="branch.name"></el-option>
@@ -23,7 +26,7 @@
                 </el-form-item>
                 <el-form-item label="所属部署" placeholder="Select">
                     <el-select  v-model="form.division">
-                      <el-option v-for="div in divisons" v-bind:key="div" v-bind:value="div"></el-option>
+                      <el-option v-for="div in divisions" v-bind:key="div.id" v-bind:value="div.name"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item>
@@ -45,6 +48,7 @@ export default {
       form:{
         name:'',
         mail:'',
+        assginedDate:'',
         password:'',
         confirmPassword:'',
         branch:'',
@@ -54,7 +58,10 @@ export default {
                   id:'',
                   name:''
                 },
-      divisons:[]
+      divisions:{
+                  id:'',
+                  name:''
+                },
     }
   },
   methods: {
@@ -74,7 +81,7 @@ export default {
     }
   },
   created:function(){
-    this.divisons = ["DSU","ISU","AMU","FBI","CIA","KGB"]
+    //APIから所属情報を受け取る
     axios.get('http://localhost:8081/test/getBranch',{
       })
       .then((response) => {
@@ -83,6 +90,18 @@ export default {
       .catch((error) => {
         console.log("errorです" + error);
       });
+
+      //APIから所属情報を受け取る
+      axios.get('http://localhost:8081/test/getDivision',{
+      })
+      .then((response) => {
+        this.divisions = response.data.divisionList
+        console.log(this.divisions)
+      })
+      .catch((error) => {
+        console.log("errorです" + error);
+      });
+
   }
 
 };
