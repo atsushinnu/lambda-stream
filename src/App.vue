@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Header id="header"></Header>
     <div class="main-content">
         <router-view></router-view>
     </div>
@@ -7,8 +8,10 @@
 </template>
 
 <script>
+import Header from "./components/Header.vue" 
 export default {
   components: {
+    Header,
   },
 };
 </script>
@@ -35,6 +38,15 @@ pre {
   text-align: center;
   font-size: 25px;
   margin-top: 30px;
+}
+
+.header {
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background: #ffffff;
 }
 
 .router{
