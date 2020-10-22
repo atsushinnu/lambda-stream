@@ -7,9 +7,9 @@
             </div>
         </div>
         <div class="router">
-            <span>1. ジェネリクス</span>
+            <span>2. 関数型インターフェース</span>  
             <div>
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTLHo-gGC0e4sP9-o9oCds3Wg4v2aQgsUuUpm40p1ixgnUljvh4Ppt7UOeD5b38JErj1LQDZ4CGXGOe/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS-hSv1INS5Oe8iQ6Z4_tT0FnFy_RsXk-bjmMgTA3SlMA8AHsERTGeKy0sT7KEO51KpKqSRl5UC1Ot5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
 
             <div class="editor">
@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import Paiza from "./Paiza.vue";
-import editor from "./Editor.vue";
+import Paiza from "../../components/Paiza.vue";
+import editor from "../../components/Editor.vue";
 import scrollbar from "./Scrollbar.vue"
 
 export default {

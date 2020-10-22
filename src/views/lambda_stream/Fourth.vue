@@ -7,9 +7,9 @@
             </div>
         </div>
         <div class="router">
-            <span>5. 中間操作</span>
+            <span>4. StreamAPI</span>
             <div>
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTBvvYGq38_GB1qH7eWRZ-8zmHCNZc9xF9gXzWe4gUcMOlhIUubn03wERAHfjeUkehT3EVcZ_jNbZd_/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQqF857LTJbkUNbo1eMCnq29l3ITXCfnzVKZy8ItWSGS5WYxM-fMBmAan4O5V3wN3hkJZp4d-qhRcuI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="539" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
 
             <div class="editor">
@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import Paiza from "./Paiza.vue";
-import editor from "./Editor.vue";
+import Paiza from "../../components/Paiza.vue";
+import editor from "../../components/Editor.vue";
 import scrollbar from "./Scrollbar.vue"
 
 export default {

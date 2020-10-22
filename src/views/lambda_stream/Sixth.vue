@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import Paiza from "./Paiza.vue";
-import editor from "./Editor.vue";
+import Paiza from "../../components/Paiza.vue";
+import editor from "../../components/Editor.vue";
 import scrollbar from "./Scrollbar.vue"
 
 export default {
