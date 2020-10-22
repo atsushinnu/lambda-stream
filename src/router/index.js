@@ -8,50 +8,48 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../components/First.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/First.vue')
   },
   {
     path: '/second',
     name: 'Second',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Second.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/Second.vue')
   },
   {
     path: '/third',
     name: 'Third',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Third.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/Third.vue')
   },
   {
     path: '/fourth',
     name: 'Fourth',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Fourth.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/Fourth.vue')
   },
   {
     path: '/fifth',
     name: 'Fifth',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Fifth.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/Fifth.vue')
   },
   {
     path: '/sixth',
     name: 'Sixth',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Sixth.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/Sixth.vue')
   },
   {
     path: '/question',
     name: 'Question',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Question.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/Question.vue')
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Contact.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/lambda_stream/Contact.vue')
   },
   {
     path: '/signup',
     name: 'Signup',
-    component: () => import(/* webpackChunkName: "about" */ '../components/Signup.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Signup.vue')
   }
-
-
 ]
 
 const router = new VueRouter({
