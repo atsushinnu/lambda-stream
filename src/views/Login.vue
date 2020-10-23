@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-xl-5 col-md-9 mx-auto">
+        <div class="col-xl-5 col-md-9 mx-auto main">
             <h1>ログイン</h1>
 
             <el-form ref="form" :model="form" :rules="rules" label-width="130px" label-position="left">
@@ -64,7 +64,8 @@ export default {
               { required: true, message: '確認用パスワードを入力して下さい', trigger: 'blur' },
               { validator: regexPassword, message:'確認用パスワードは半角英字と半角数字それぞれ1文字以上含む5文字以上20文字以下の文字列で入力して下さい', trigger: 'blur' },
               { validator: validateConfirmPassword, message:'パスワードと確認用パスワードが異なります', trigger: 'blur' },
-          ]      },
+          ]      
+      },
     }
   },
   methods: {

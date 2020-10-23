@@ -8,6 +8,9 @@
         <div class="link">
             <router-link to="/signup">新規登録</router-link>
         </div>
+        <div class="link">
+            <router-link to="/login">ログイン</router-link>
+        </div>
       </b-navbar>
     </div>
   </div>
